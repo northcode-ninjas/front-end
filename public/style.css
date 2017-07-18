@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+* {
+  background-color: #eee;
+  font: normal 20px Varela Round;
+  color: #333;
+}
+
+.columns {
+  height:100% !important;
+  overflow:hidden;
+  text-align:center;
+  padding-bottom:20px;
+}
+
+.main {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:center;
+  align-items: center;
+}
+
+.Header {
+  margin: 20px 0;
+  padding: 40px 0;
+  border: double 5px #333;
+}

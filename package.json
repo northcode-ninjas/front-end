@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/northcode-ninjas/front-end#readme",
   "dependencies": {
+    "bulma": "^0.4.3",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
