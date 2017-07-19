@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
     render () {
@@ -8,7 +8,7 @@ class Splash extends React.Component {
                 <div>Welcome Student, please enter your ninja name below:</div>
                 <form onSubmit="" >
                     <input className="input is-primary" type="text" placeholder="Your ninja name here" />
-                    <button className="button is-primary">Submit</button>
+                    <Link to='/avatar'><button className="button is-primary">Submit</button></Link>
                 </form>
             </div>
         )
