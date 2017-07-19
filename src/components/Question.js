@@ -31,13 +31,15 @@ class Question extends React.Component {
             <span>{questions.Academy[0].explanation}</span><br />
             <span>{questions.Academy[0].example}</span><br />
             <h3>{questions.Academy[0].question}</h3>
-            <span>{questions.Academy[0].answers[0]}</span><br />
-            <span>{questions.Academy[0].answers[1]}</span><br />
-            <span>{questions.Academy[0].answers[2]}</span><br />
-            <span>{questions.Academy[0].answers[3]}</span>
+            <form>
+            <label className="radio"><input type="radio" name="answer0" />{questions.Academy[0].answers[0]}</label><br />
+            <label className="radio"><input type="radio" name="answer1" />{questions.Academy[0].answers[1]}</label><br />
+            <label className="radio"><input type="radio" name="answer2" />{questions.Academy[0].answers[2]}</label><br />
+            <label className="radio"><input type="radio" name="answer3" />{questions.Academy[0].answers[3]}</label>
+            </form>
+            <Link to='/success'><button className="button is-primary is-outlined is-large">Submit</button></Link>
             </div>
-        <h3>1) Click the submit button.</h3>
-        <Link to='/success'><button className="button is-primary is-outlined is-large">Submit</button></Link>
+        
       </div>
     );
   }

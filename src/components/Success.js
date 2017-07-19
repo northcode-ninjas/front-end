@@ -6,7 +6,7 @@ class Success extends React.Component {
     return (
       <div className="Success">
         <h3>Congratulations! You are a code ninja!</h3>
-        <Link to='/question'><button className="button is-primary is-outlined is-large">Submit</button></Link>
+        <Link to='/question'><button className="button is-primary is-outlined is-large">Continue</button></Link>
       </div>
     );
   }
