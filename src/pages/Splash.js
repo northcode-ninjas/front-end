@@ -9,6 +9,7 @@ class Splash extends React.Component {
                 <img src= {Sensei1} />
                 <div>Welcome Student,<br />please enter your<br />ninja name below:</div>
                 <br />
+                <div>Welcome Student, please enter your ninja name below:</div>
                 <form onSubmit="" >
                     <input className="input is-primary" type="text" placeholder="Your ninja name here" />
                     <Link to='/avatar'><button className="button is-primary">Submit</button></Link>
