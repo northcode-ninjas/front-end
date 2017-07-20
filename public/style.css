@@ -45,7 +45,7 @@
   text-align:left;
 }
 
-.avatar {
+.avatar, .levelUp {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
