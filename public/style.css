@@ -2,7 +2,8 @@
 
 * {
   background-color: #eee;
-  font: normal 20px Varela Round;
+  font-size: 20px;
+  font: normal 20px OpenDyslexicAlta-Regular;
   color: #333;
 }
 
@@ -25,3 +26,29 @@
   padding: 40px 0;
   border: double 5px #333;
 }
+
+@font-face {
+  font-family: Karate;
+  src: url(Karate.ttf);
+}
+
+.big {
+  font: normal 50px Karate;
+}
+
+@font-face {
+  font-family: OpenDyslexicAlta-Regular;
+  src: url(OpenDyslexicAlta-Regular.otf) format("opentype");
+}
+
+.question {
+  text-align:left;
+}
+
+.avatar, .levelUp {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
