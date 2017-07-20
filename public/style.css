@@ -41,3 +41,7 @@
   src: url(OpenDyslexicAlta-Regular.otf) format("opentype");
 }
 
+.question {
+  text-align:left;
+}
+
