@@ -29,6 +29,6 @@ Home.propTypes = {
     history: PropTypes.shape({
         push: PropTypes.func.isRequired
     })
-}
+};
 
 export default Home;
