@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
-import Main from './Main';
 
 class App extends React.Component {
   render () {
@@ -9,12 +9,16 @@ class App extends React.Component {
         <div className="column"></div>
         <div className="main column is-half">
           <Header />
-          <Main />   
+          {this.props.children}
         </div>
         <div className="column"></div>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.any.isRequired
+};
 
 export default App;

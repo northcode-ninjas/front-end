@@ -18,7 +18,7 @@ class Avatar extends React.Component {
                 <Link to='/question'><button className="button is-primary is-outlined is-large">Continue</button></Link>
               
             </div>
-        )
+        );
     }
 }
 

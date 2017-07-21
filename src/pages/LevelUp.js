@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Star from '../Images/ninja-throwing-star.jpg';
+import ninjaStar from '../Images/ninja-throwing-star.jpg';
 
 class LevelUp extends React.Component {
     render () {
@@ -13,7 +13,7 @@ class LevelUp extends React.Component {
                 <Link to='/avatar'><button className="button is-primary is-outlined is-large"> Back</button></Link>
               
             </div>
-        )
+        );
     }
 }
 
