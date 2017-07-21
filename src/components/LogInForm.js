@@ -37,11 +37,13 @@ class LogInForm extends React.Component {
         if (this.state.userName.length === 0) return;
         this.props.loginUser(this.state.userName);
         this.setState({userName: ''});
+        this.props.redirect();
     }
 }
 
 LogInForm.propTypes = {
-    loginUser: PropTypes.func.isRequired
+    loginUser: PropTypes.func.isRequired,
+    redirect: PropTypes.func.isRequired
 };
 
 function mapDispatchToProps (dispatch) {
