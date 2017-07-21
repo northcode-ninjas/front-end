@@ -10,10 +10,6 @@ class Header extends React.Component {
           </div>
         </div>
       </section>
-
-      <div className="Header">
-        <h1>Code Ninjas</h1>
-      </div>
     );
   }
 }

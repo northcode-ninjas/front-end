@@ -15,7 +15,7 @@ class Splash extends React.Component {
                     <Link to='/avatar'><button className="button is-primary">Submit</button></Link>
                 </form>
             </div>
-        )
+        );
     }
 }
 

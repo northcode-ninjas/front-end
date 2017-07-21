@@ -23,7 +23,7 @@ const questions = {
 };
 
 class Question extends React.Component {
-  render() {
+  render () {
     return (
       <div className="question">
         <div>
