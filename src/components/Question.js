@@ -2,24 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const questions = {
-  Academy: [
-    {
-      title: 'What\'s Data?',
-      explanation: 'Data is information that the computer can use. We will go through 3 in the example',
-      example: 'String: any words or numbers in quote marks, eg \'hello\' or "hello", Number:any numbers with no quote marks, eg 23, 65, 1.5, Boolean: either true or false with no quote marks, eg, true or false',
-      question: 'Choose the string',
-      answers: ['"Coding"', 34, 'true', 'name'],
-      correct: 'Coding'
-    },
-    {
-      title: 'What\'s Data?',
-      explanation: 'Data is information that the computer can use. We will go through 3 in the example',
-      example: 'String: any words or numbers in quote marks, eg \'hello\' or "hello", Number:any numbers with no quote marks, eg 23, 65, 1.5, Boolean: either true or false with no quote marks, eg, true or false',
-      question: 'Choose the number',
-      answers: ['"Coding"', 34, 'true', 'name'],
-      correct: 34
-    }
-  ]
     Academy: [
       {
         title: 'What\'s Data?',

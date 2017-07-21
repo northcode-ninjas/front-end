@@ -1,10 +1,38 @@
+// React
 import React from 'react';
 import {render} from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './components/App';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-, document.getElementById('root'));
+// Redux
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+
+// Components/Pages
+import App from './components/App';
+import Home from './pages/Home';
+
+// Reducer
+import reducer from './reducer';
+
+// Store
+const store = createStore(reducer, applyMiddleware(thunk, logger));
+
+// Browser History
+import createBrowserHistory from 'history/createBrowserHistory';
+const history = createBrowserHistory();
+
+render((
+  <Provider store={store}>
+    <Router history={history}>
+      <App>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+        </Switch>
+      </App>
+    </Router>
+  </Provider>
+), 
+document.getElementById('root')
+);
