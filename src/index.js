@@ -12,6 +12,7 @@ import logger from 'redux-logger';
 // Components/Pages
 import App from './components/App';
 import Home from './pages/Home';
+import UserProfile from './pages/UserProfile';
 
 // Reducer
 import reducer from './reducer';
@@ -29,6 +30,7 @@ render((
       <App>
         <Switch>
           <Route exact path='/' component={Home}/>
+          <Route path='/profile' component={UserProfile}/>
         </Switch>
       </App>
     </Router>
