@@ -17,9 +17,8 @@ class UserProfile extends React.Component {
                 )}
                 {user && (
                     <div className="UserProfile">
-                        <h1 className="title is-1">UserProfile</h1>
+                        <h1 className="title is-1">{user.username}</h1>
                         <h2>Current level: {levelNames[user.level]}</h2>
-                        <p>{user.username}</p>
                         <Link className="button is-success" to={`/play/${user.level + 1}`}>Train</Link>
                     </div>
                 )}
