@@ -1,28 +1,28 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 class Question extends React.Component {
   render () {
-    // const {question, loading} = this.props;
+    const {question} = this.props;
     return (
       <div className="question">
-          <h2>Sensei Says: title</h2>
-          <span>explanation</span><br />
-          <span>example</span><br />
+          <h2>Sensei Says: {question.title}</h2>
+          <span>question.background</span><br />
+          <span>question.example</span><br />
           <hr />
-          <h3>question</h3>
-          <button className="button is-primary is-outlined is-large">answers[0]</button>
-          <button className="button is-primary is-outlined is-large">answers[1]</button>
-          <button className="button is-primary is-outlined is-large">answers[2]</button>
-          <button className="button is-primary is-outlined is-large">answers[3]</button>
+          <h3>question.question</h3>
+          <button className="button is-primary is-outlined is-large">question.answers[0]</button>
+          <button className="button is-primary is-outlined is-large">question.answers[1]</button>
+          <button className="button is-primary is-outlined is-large">question.answers[2]</button>
+          <button className="button is-primary is-outlined is-large">question.answers[3]</button>
       </div>
     );
   }
 }
 
 Question.propTypes = {
-    
+    question: PropTypes.object.isRequired
 };
 
 function mapStateToProps (/*state*/) {

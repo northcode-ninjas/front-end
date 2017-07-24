@@ -4,13 +4,17 @@ import {connect} from 'react-redux';
 
 import {fetchQuestions} from '../actions/questions';
 
+import Question from '../components/Question';
+
 class Level extends React.Component {
   constructor (props) {
     super(props);
   }
 
   componentDidMount () {
-    this.props.fetchQuestions(this.props.match.params.level)
+    const {level} = this.props.match.params;
+    console.log({level})
+    this.props.fetchQuestions(level)
   }
 
   render () {
@@ -20,7 +24,7 @@ class Level extends React.Component {
         <h1>Level {this.props.match.params.level}</h1>
         {(loading || questions.length === 0) && <p>Loading...</p>}
         {!loading && questions.length > 0 && (
-          <h2>Questions</h2>
+          <Question question={questions[0]} />
         )}
       </div>
     )
