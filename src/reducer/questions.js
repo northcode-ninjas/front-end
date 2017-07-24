@@ -1,34 +1,39 @@
-import * as types from '../actions/types';
+import * as types from '../actions/Types';
 
 const initialState = {
-  question: [],
-  loading: false
+  data: [],
+  loading: false,
+  error: null
 };
 
-function QuestionsReducer (prevState = initialState, action) {
+function questions (prevState = initialState, action) {
   if (!action) return prevState;
 
   if (action.type === types.FETCH_QUESTIONS_REQUEST) {
-    const newState = Object.assign({}, prevState);
-    newState.loading = true;
-    return newState;
+    return Object.assign({}, prevState, {
+      loading: true,
+      data: [],
+      error: null
+    });
   }
 
   if (action.type === types.FETCH_QUESTIONS_SUCCESS) {
-    const newState = Object.assign({}, prevState);
-    newState.topics = action.payload;
-    return newState;
+    return Object.assign({}, prevState, {
+      data: action.payload,
+      loading: false,
+      error: null
+    });
   }
 
   if (action.type === types.FETCH_QUESTIONS_ERROR) {
-    const newState = Object.assign({}, prevState);
-    newState.error = action.payload;
-    newState.loading = false;
-
-    return newState;
+    return Object.assign({}, prevState, {
+      error: action.payload,
+      loading: false,
+      data: []
+    });
   }
 
   return prevState;
 }
 
-export default QuestionsReducer;
+export default questions;
