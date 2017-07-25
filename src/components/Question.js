@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 class Question extends React.Component {
   constructor (props) {
         super(props);
-        this.state = {
-            questionIndex: 0
-        };
-        this.handleAnswer = this.handleAnswer.bind(this);
     }
   render () {
     const {question} = this.props;
@@ -18,27 +14,26 @@ class Question extends React.Component {
           <span>{question.example}</span><br />
           <hr />
           <h3>{question.question}</h3>
-          <form onSubmit={this.handleAnswer}>
-            <button className="button is-primary">{question.answers[0]}</button>
-            <button className="button is-primary">{question.answers[1]}</button>
-            <button className="button is-primary">{question.answers[2]}</button>
-            <button className="button is-primary">{question.answers[3]}</button>
-          </form>
+
+          <div className="answers">
+            {question.answers.map((answer, i) => {
+              const handler = answer === question.correct ? this.props.handleCorrectAnswer : () => {}
+              return (
+                <button key={i} className="button is-primary" onClick={handler}>
+                  {answer}
+                </button>
+              )
+            })}
+          </div>
       </div>
     );
-  }
-  handleAnswer (e) {
-    e.preventDefault();
-    // if correct answer clicked, next question renders
-      if (e.target.innerHTML === this.props.question.correct) {
-        this.setState({questionIndex: this.state.questionIndex++});
-        this.props.redirect();
-    }
   }
 }
 
 Question.propTypes = {
-    question: PropTypes.object.isRequired
+    question: PropTypes.object.isRequired,
+    questionIndex: PropTypes.number.isRequired,
+    handleCorrectAnswer: PropTypes.func.isRequired
 };
 
 export default Question;

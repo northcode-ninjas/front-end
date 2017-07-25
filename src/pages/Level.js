@@ -9,25 +9,38 @@ import Question from '../components/Question';
 class Level extends React.Component {
   constructor (props) {
     super(props);
+    this.state = {
+      questionIndex: 0
+    };
+    this.handleCorrectAnswer = this.handleCorrectAnswer.bind(this);
   }
-
   componentDidMount () {
     const {level} = this.props.match.params;
-    console.log({level})
     this.props.fetchQuestions(level)
   }
 
   render () {
-    const {loading, /*error, */questions} = this.props;
+    const questionIndex = this.state.questionIndex;
+    const {loading, error, questions} = this.props;
     return (
       <div className="Level">
         <h1>Level {this.props.match.params.level}</h1>
+        {(error) && <p>{error}</p>}
         {(loading || questions.length === 0) && <p>Loading...</p>}
         {!loading && questions.length > 0 && (
-          <Question question={questions[0]} />
+          <Question 
+            question ={questions[questionIndex]} 
+            questionIndex={questionIndex} 
+            handleCorrectAnswer={this.handleCorrectAnswer}
+          />
         )}
       </div>
-    )
+    );
+  }
+  handleCorrectAnswer () {
+    this.setState({
+      questionIndex: this.state.questionIndex + 1
+    });
   }
 }
 
