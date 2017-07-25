@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {fetchQuestions} from '../actions/questions';
 
 import Question from '../components/Question';
+import LevelUp from './LevelUp';
 
 const levelNames = ['Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja'];
 
@@ -30,9 +31,11 @@ class Level extends React.Component {
         <h1> Current level: {levelNames[this.props.match.params.level]}</h1>
         {(error) && <p>{error}</p>}
         {(loading || questions.length === 0) && <p>Loading...</p>}
-        {!loading && questions.length > 0 && (
+        {(!loading && questionIndex === questions.length && 
+          <LevelUp />)}
+        {!loading && questions.length > 0 && questionIndex < questions.length && (
           <Question 
-            question ={questions[questionIndex]} 
+            question={questions[questionIndex]} 
             questionIndex={questionIndex} 
             handleCorrectAnswer={this.handleCorrectAnswer}
           />
