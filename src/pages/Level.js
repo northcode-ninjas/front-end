@@ -6,6 +6,9 @@ import {fetchQuestions} from '../actions/questions';
 
 import Question from '../components/Question';
 
+const levelNames = ['Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja'];
+
+
 class Level extends React.Component {
   constructor (props) {
     super(props);
@@ -24,7 +27,7 @@ class Level extends React.Component {
     const {loading, error, questions} = this.props;
     return (
       <div className="Level">
-        <h1>Level {this.props.match.params.level}</h1>
+        <h1> Current level: {levelNames[this.props.match.params.level]}</h1>
         {(error) && <p>{error}</p>}
         {(loading || questions.length === 0) && <p>Loading...</p>}
         {!loading && questions.length > 0 && (
