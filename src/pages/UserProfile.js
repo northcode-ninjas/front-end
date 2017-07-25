@@ -19,7 +19,7 @@ class UserProfile extends React.Component {
                     <div className="UserProfile">
                         <h1 className="title is-1">{user.username}</h1>
                         <h2>Current level: {levelNames[user.level]}</h2>
-                        <Link className="button is-success" to={`/levels/${user.level}`}>Train</Link>
+                        <Link className="button is-success" to={`/levels/${user.level}/questions`}>Train</Link>
                     </div>
                 )}
             </div>
