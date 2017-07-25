@@ -18,6 +18,16 @@ class Level extends React.Component {
     };
     this.handleCorrectAnswer = this.handleCorrectAnswer.bind(this);
   }
+
+  componentWillReceiveProps (newProps) {
+    if (this.props.match.params.level !== newProps.match.params.level) {
+      this.props.fetchQuestions(newProps.match.params.level);
+      this.setState({
+        questionIndex: 0
+      });
+    }
+  }
+
   componentDidMount () {
     const {level} = this.props.match.params;
     this.props.fetchQuestions(level)
@@ -32,7 +42,11 @@ class Level extends React.Component {
         {(error) && <p>{error}</p>}
         {(loading || questions.length === 0) && <p>Loading...</p>}
         {(!loading && questionIndex === questions.length && 
-          <LevelUp />)}
+          <LevelUp 
+            level={this.props.match.params.level}
+            questionIndex={questionIndex}
+          />
+        )}
         {!loading && questions.length > 0 && questionIndex < questions.length && (
           <Question 
             question={questions[questionIndex]} 

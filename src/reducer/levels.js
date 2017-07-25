@@ -1,4 +1,4 @@
-import * as types from '../actions/types';
+import * as types from '../actions/Types';
 
 const initialState = {
   level: 0,
