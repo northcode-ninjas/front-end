@@ -27,7 +27,7 @@ class Level extends React.Component {
 
   componentDidMount () {
     const {level} = this.props.match.params;
-    this.props.fetchQuestions(level)
+    this.props.fetchQuestions(level);
   }
 
   render () {
@@ -65,7 +65,7 @@ function mapStateToProps (state) {
     loading: state.questions.loading,
     error: state.questions.error,
     questions: state.questions.data
-  }
+  };
 }
 
 function mapDispatchToProps (dispatch) {
@@ -73,7 +73,7 @@ function mapDispatchToProps (dispatch) {
     fetchQuestions: (level) => {
       dispatch(fetchQuestions(level));
     }
-  }
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Level);
