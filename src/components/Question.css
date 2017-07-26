@@ -1,0 +1,26 @@
+.button {
+   
+    background-color: green;
+}
+.button:before {
+    background-color: green;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:focus {
+    -webkit-animation-name: colChange;
+    -webkit-animation-duration: 2s;
+    animation-name: colChange;
+    animation-duration: 2s;
+}
+@keyframes colChange {
+    from {background-color: red;}
+    to {background-color: green;}
+}
+
+.button:after {
+    background-color: green;
+}

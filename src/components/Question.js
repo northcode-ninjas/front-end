@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Question.css';
+
 class Question extends React.Component {
   constructor (props) {
         super(props);
@@ -19,7 +21,7 @@ class Question extends React.Component {
             {question.answers.map((answer, i) => {
               const handler = answer === question.correct ? this.props.handleCorrectAnswer : () => {}
               return (
-                <button key={i} className="button is-primary" onClick={handler}>
+                <button key={i} className="button" onClick={handler}>
                   {answer}
                 </button>
               )
