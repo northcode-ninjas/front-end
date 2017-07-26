@@ -13,7 +13,7 @@ class Home extends React.Component {
     render () {
         return (
             <div className="Home">
-                <img src= {sensei} />
+                 <img src= {sensei} /> 
                 <p>Welcome Student,<br />please enter your<br />ninja name below:</p>
                 <br />
                 <LogInForm redirect={this.navigateToUserProfile} />
