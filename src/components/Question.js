@@ -25,6 +25,7 @@ class Question extends React.Component {
               )
             })}
           </div>
+          <progress className="progress is-warning" value={this.props.questionIndex} max="5"></progress>
       </div>
     );
   }
