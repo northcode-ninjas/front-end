@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import LogInForm from '../components/LogInForm';
-
-import sensei from '../Images/Sensei1.jpeg';
+// import sensei from '../Images/Sensei1.jpeg';
 
 class Home extends React.Component {
     constructor (props) {
@@ -13,7 +12,7 @@ class Home extends React.Component {
     render () {
         return (
             <div className="Home">
-                 <img src= {sensei} /> 
+                 {/* <img src= {sensei} />  */}
                 <p>Welcome Student,<br />please enter your<br />ninja name below:</p>
                 <br />
                 <LogInForm redirect={this.navigateToUserProfile} />
