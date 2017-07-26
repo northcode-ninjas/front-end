@@ -61,6 +61,7 @@ body {
 
 .question {
   text-align:left;
+  text-shadow: 1px 1px 2px #444;
 }
 
 .avatar, .levelUp {
@@ -77,4 +78,53 @@ body {
 .LogInForm .button{
   color: #ffff99;
   background-color: #ff6666;
+}
+
+.question .sensei {
+  background-color:rgba(150,150,150,0.3);
+}
+
+.question .sidebar {
+  background-color:rgba(255,255,255,0.1);
+}
+
+.question h2 {
+  font-size: 1.5em;
+  font-weight:bold;
+  text-shadow: 1px 1px 2px #444;
+}
+
+.question .background {
+  background-color:#FFF;
+  border-radius:10px;
+  color:#333;
+  text-shadow:none;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.question .example {
+  background-color:#000;
+  border-radius: 10px;
+  padding:10px;
+  margin: 10px 0;
+  font: normal 1em 'Courier New', monospace;
+  text-shadow: none;
+}
+
+.question .background img {
+  float:left;
+  width: 25%;
+}
+
+.question .answers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.question .answers .button {
+  min-width:45%;
+  margin: 10px;
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import sensei from '../../public/Images/Sensei1.jpeg';
+
+const levelNames = ['Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja'];
 
 class Question extends React.Component {
   constructor (props) {
@@ -8,13 +11,17 @@ class Question extends React.Component {
   render () {
     const {question} = this.props;
     return (
-      <div className="question">
+      <div className="question columns">
+        <div className="column is-two-thirds sensei">
           <h2>Sensei Says: {question.title}</h2>
-          <span>{question.background}</span><br />
-          <span>{question.example}</span><br />
+          <div className="background">
+            <img className="senseiSays" src={sensei} alt="Sensei" />
+            {question.background}
+          </div>
+          <div className="example">{question.example}</div>
           <hr />
-          <h3>{question.question}</h3>
 
+          <h2>{question.question}</h2>
           <div className="answers">
             {question.answers.map((answer, i) => {
               const handler = answer === question.correct ? this.props.handleCorrectAnswer : () => {}
@@ -25,7 +32,11 @@ class Question extends React.Component {
               )
             })}
           </div>
+        </div>
+        <div className="column sidebar">
+          <span>Current level: {levelNames[question.level]}</span>
           <progress className="progress is-warning" value={this.props.questionIndex} max="5"></progress>
+        </div>
       </div>
     );
   }
