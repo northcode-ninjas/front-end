@@ -1,10 +1,38 @@
- @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@font-face {
+  font-family: Karate;
+  src: url(Karate.ttf);
+}
+
+@font-face {
+  font-family: OpenDyslexicAlta-Regular;
+  src: url(OpenDyslexicAlta-Regular.otf) format("opentype");
+}
 
 * {
-  background-color: #eee;
+  /* background-color: #eee; */
   font-size: 20px;
   font: normal 20px OpenDyslexicAlta-Regular;
-  color: #333;
+  color: #ffff99;
+}
+
+body, html {
+  height:100% !important;
+}
+
+#root {
+  min-height:100%;
+  height: auto !important;
+  height: 100%;
+  overflow:hidden;
+}
+
+body {
+  background-image: url('./Images/backgrounds/rooftops.png');
+  background-position: center;
+   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
 }
 
 .columns {
@@ -21,24 +49,14 @@
   align-items: center;
 }
 
-.Header {
-  margin: 20px 0;
-  padding: 40px 0;
-  border: double 5px #333;
-}
-
-@font-face {
-  font-family: Karate;
-  src: url(Karate.ttf);
+.header {
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .big {
-  font: normal 50px Karate;
-}
-
-@font-face {
-  font-family: OpenDyslexicAlta-Regular;
-  src: url(OpenDyslexicAlta-Regular.otf) format("opentype");
+  font: normal 100px Karate;
+  color: #ffff99;
 }
 
 .question {
@@ -52,3 +70,11 @@
   align-items: center;
 } 
 
+.LogInForm .input{
+  background: transparent;
+}
+
+.LogInForm .button{
+  color: #ffff99;
+  background-color: #ff6666;
+}

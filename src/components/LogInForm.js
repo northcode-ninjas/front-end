@@ -17,13 +17,13 @@ class LogInForm extends React.Component {
         return (
             <form className="LogInForm" onSubmit={this.handleSubmit}>
                 <input 
-                    className="input is-primary" 
+                    className="input" 
                     type="text" 
                     placeholder="Your ninja name here"
                     value={this.state.userName}
                     onChange={this.handleChange}
                 />
-                <button className="button is-primary" type="submit">Log In</button>
+                <button className="button" type="submit">Log In</button>
             </form>
         );
     }
