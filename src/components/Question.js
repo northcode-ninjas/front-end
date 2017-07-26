@@ -26,12 +26,12 @@ class Question extends React.Component {
           <h2>{question.question}</h2>
           <div className="answers">
             {question.answers.map((answer, i) => {
-              const handler = answer === question.correct ? this.props.handleCorrectAnswer : () => {}
+              const handler = answer === question.correct ? this.props.handleCorrectAnswer : () => {};
               return (
                 <button key={i} className="button" onClick={handler}>
                   {answer}
                 </button>
-              )
+              );
             })}
           </div>
         </div>
