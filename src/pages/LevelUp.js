@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ninjaStar from '../Images/ninja-throwing-star.jpg';
+import ninjaStar from '../../public/Images/ninja-throwing-star.jpg';
 import axios from 'axios';
 import {ROOT} from '../../config';
 import PropTypes from 'prop-types';
