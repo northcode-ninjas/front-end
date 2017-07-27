@@ -193,3 +193,14 @@ body {
 .UserProfile img {
     width: 50%;
 }
+
+/* LevelUp */
+
+.levelUp {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items:center;
+  width:50%;
+  margin:0 auto;
+}
