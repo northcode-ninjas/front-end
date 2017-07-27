@@ -90,7 +90,11 @@ body {
 }
 
 .LogInForm .input{
-  background: transparent;
+  background: rgba(150,150,150,0.3);
+  font: normal 1em OpenDyslexicAlta-Regular;
+  color:#ff9;
+  border:none;
+  margin-right:10px;
 }
 
 .LogInForm .button{
