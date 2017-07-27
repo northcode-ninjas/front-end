@@ -1,3 +1,5 @@
+/* defaults and resets */ 
+
 @font-face {
   font-family: Karate;
   src: url(Karate.ttf);
@@ -14,6 +16,8 @@
   font: normal 20px OpenDyslexicAlta-Regular;
   color: #ffff99;
 }
+
+/* layout */
 
 body, html {
   height:100% !important;
@@ -59,17 +63,14 @@ body {
   color: #ffff99;
 }
 
-.question {
-  text-align:left;
-  text-shadow: 1px 1px 2px #444;
-}
-
 .avatar, .levelUp {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 } 
+
+/* home and login */
 
 .Home {
   width: 50%;
@@ -95,6 +96,13 @@ body {
 .LogInForm .button{
   color: #ffff99;
   background-color: #ff6666;
+}
+
+/* question */
+
+.question {
+  text-align:left;
+  text-shadow: 1px 1px 2px #444;
 }
 
 .question .sensei {
