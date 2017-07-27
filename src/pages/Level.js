@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
+
 import {fetchQuestions} from '../actions/questions';
 
 import Question from '../components/Question';
@@ -11,13 +12,23 @@ class Level extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      questionIndex: 0
+      questionIndex: 0,
+      backgroundImage: {
+        0 : 'level0.jpg',
+        1 : 'level1.jpg'
+      }
     };
     this.handleCorrectAnswer = this.handleCorrectAnswer.bind(this);
   }
 
+  changeBackground (level) {
+    // do the background stuff i.e. grab document and make background image
+    document.getElementsByTagName('body')[0].style.background = `url("/Images/backgrounds/${this.state.backgroundImage[level]}")` ;
+  }
+
   componentWillReceiveProps (newProps) {
     if (this.props.match.params.level !== newProps.match.params.level) {
+      this.changeBackground(newProps.match.params.level);
       this.props.fetchQuestions(newProps.match.params.level);
       this.setState({
         questionIndex: 0
@@ -27,7 +38,9 @@ class Level extends React.Component {
 
   componentDidMount () {
     const {level} = this.props.match.params;
+    this.changeBackground(level);
     this.props.fetchQuestions(level);
+
   }
 
   render () {
