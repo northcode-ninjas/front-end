@@ -28,9 +28,6 @@ class UserProfile extends React.Component {
                         <div className="userBox">
 
                         <h1 className="title is-1">{user.username}</h1>
-                        <figure className="userImage">
-                        <img src={user.avatar_url}/>
-                        </figure>
                         <h2>Current level: {levelNames[user.level]}</h2>
                         <Link className="button is-success" to={`/levels/${user.level}/questions`}>Train</Link>
                     </div>
