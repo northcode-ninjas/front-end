@@ -17,7 +17,14 @@ class Level extends React.Component {
         0 : 'level0.jpg',
         1 : 'level1.jpg',
         2 : 'level2.jpg',
-        3 : 'level2.jpg'
+        3 : 'level3.jpg',
+        4 : 'level4.jpg',
+        5 : 'level5.jpg',
+        6 : 'level6.jpg',
+        7 : 'level7.jpg',
+        8 : 'level8.jpg',
+        9 : 'level9.jpg',
+        10 : 'level10.jpg'
       }
     };
     this.handleCorrectAnswer = this.handleCorrectAnswer.bind(this);

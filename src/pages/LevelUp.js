@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ninjaStar from '../../public/Images/ninja-throwing-star.jpg';
 import axios from 'axios';
 import {ROOT} from '../../config';
 import PropTypes from 'prop-types';
@@ -19,7 +18,6 @@ class LevelUp extends React.Component {
     return (
       <div className="levelUp">
         <span>Well done, student! Your {levelNames[this.props.level]} training is complete!</span>
-        <img width="50%" src= {ninjaStar} />
         <span>Press Graduate to begin Level {(+this.props.level) + 2}: {levelNames[+this.props.level + 1]}</span>
         <Link to={`/levels/${+this.props.level + 1}/questions`}><button className="button"> Graduate</button></Link>
         <Link to={'/profile'}><button className="button"> Restart Training</button></Link>
