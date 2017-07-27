@@ -4,8 +4,6 @@ import sensei from '../../public/Images/Sensei1.jpeg';
 
 const levelNames = ['Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja'];
 
-import './Question.css';
-
 class Question extends React.Component {
   constructor (props) {
         super(props);
