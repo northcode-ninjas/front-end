@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './Home.css';
 import LogInForm from '../components/LogInForm';
 import sensei from '../../public/Images/Sensei1.jpeg';
 

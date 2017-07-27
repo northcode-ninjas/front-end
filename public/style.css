@@ -31,7 +31,7 @@ body, html {
 }
 
 body {
-  background-image: url('./Images/backgrounds/rooftops.png');
+  background-image: url('../Images/backgrounds/rooftops.png');
   background-position: center;
    background-size: cover;
   -webkit-background-size: cover;
