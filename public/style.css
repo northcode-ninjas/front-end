@@ -188,3 +188,7 @@ body {
 .button:after {
     background-color: #f66;
 }
+
+.UserProfile img {
+    width: 50%;
+}
