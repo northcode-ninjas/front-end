@@ -15,7 +15,9 @@ class Level extends React.Component {
       questionIndex: 0,
       backgroundImage: {
         0 : 'level0.jpg',
-        1 : 'level1.jpg'
+        1 : 'level1.jpg',
+        2 : 'level2.jpg',
+        3 : 'level2.jpg'
       }
     };
     this.handleCorrectAnswer = this.handleCorrectAnswer.bind(this);
