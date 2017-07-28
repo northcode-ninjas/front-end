@@ -31,7 +31,7 @@ class Level extends React.Component {
 
   changeBackground (level) {
     // do the background stuff i.e. grab document and make background image
-    document.getElementsByTagName('body')[0].style.background = `url("/Images/backgrounds/${this.state.backgroundImage[level]}")` ;
+    document.getElementsByTagName('body')[0].style.background = `url("/Images/backgrounds/${this.state.backgroundImage[level]}")`;
   }
 
   componentWillReceiveProps (newProps) {
@@ -58,7 +58,7 @@ class Level extends React.Component {
       <div className="Level">
         {(error) && <p>{error}</p>}
         {(loading || questions.length === 0) && <p>Loading...</p>}
-        {(!loading && questionIndex === questions.length && 
+        {(!loading && questionIndex === questions.length && questions.length !== 0 && 
           <LevelUp 
             level={this.props.match.params.level}
             questionIndex={questionIndex}
