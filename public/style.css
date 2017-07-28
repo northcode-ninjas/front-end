@@ -33,11 +33,11 @@ body, html {
 body {
   background-image: url('../Images/backgrounds/rooftops.png');
   background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .columns {
@@ -62,6 +62,7 @@ body {
 .big {
   font: normal 100px Karate;
   color: #ffff99;
+  text-shadow: 2px 2px 5px #444;
 }
 
 .avatar, .levelUp {
