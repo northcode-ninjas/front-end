@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import ninja from '../../public/Images/Lucy_Ninja.png';
 
-
 import './UserProfile.css';
 
 const levelNames = ['Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja'];
@@ -22,11 +21,8 @@ class UserProfile extends React.Component {
                 )}
                 {user && (
                     <div className="UserProfile">
-
                         <img src= { ninja } />
-
                         <div className="userBox">
-
                         <h1 className="title is-1">{user.username}</h1>
                         <figure className="userImage">
                         <img src={user.avatar_url}/>
