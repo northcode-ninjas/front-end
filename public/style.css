@@ -130,6 +130,7 @@ body {
   text-shadow:none;
   padding: 10px;
   margin: 10px 0;
+  min-height:125px !important;
 }
 
 .question .example {
@@ -148,14 +149,23 @@ body {
 
 .question .answers {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .question .answers .button {
-  min-width:45%;
+  background-color: #f66;
+  font: normal 1em OpenDyslexicAlta-Regular;
+  color:#ff9;
+  border:none;
   margin: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  height:auto;
+  min-width:100%;
+  /* overflow:hidden; */
 }
 
 .button {
@@ -163,6 +173,11 @@ body {
     font: normal 1em OpenDyslexicAlta-Regular;
     color:#ff9;
     border:none;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    height:auto;
+    /* overflow:hidden; */
 }
 
 .button:hover {
@@ -191,4 +206,28 @@ body {
 
 .UserProfile img {
     width: 50%;
+}
+
+/* LevelUp */
+
+.levelUp {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items:center;
+  width:50%;
+  margin:0 auto;
+}
+
+.levelUp .button {
+  background-color: #f66;
+  font: normal 1em OpenDyslexicAlta-Regular;
+  color:#ff9;
+  border:none;
+  margin: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  height:auto;
+  min-width:100%;
 }
